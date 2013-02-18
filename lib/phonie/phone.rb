@@ -1,4 +1,3 @@
-# An object representing a phone number.
 #
 # The phone number is recorded in 3 separate parts:
 # * country_code - e.g. '385', '386'
@@ -45,7 +44,7 @@ module Phonie
 
       # Santity checks
       raise "Must enter number" if self.number.blank?
-      raise "Must enter area code or set default area code" if self.area_code.blank?
+      # raise "Must enter area code or set default area code" if self.area_code.blank?
       raise "Must enter country code or set default country code" if self.country_code.blank?
     end
 
@@ -157,7 +156,7 @@ module Phonie
 
     # Formats the phone number.
     #
-    # if the method argument is a String, it is used as a format string, with the following fields being interpolated:  
+    # if the method argument is a String, it is used as a format string, with the following fields being interpolated:
     #
     # * %c - country_code (385)
     # * %a - area_code (91)
